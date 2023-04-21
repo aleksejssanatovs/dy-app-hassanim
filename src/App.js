@@ -5,6 +5,7 @@ import Shop from './routes/shop/shop.component';
 import Cart from './routes/cart/cart.component';
 import Login from './routes/login/login.compoenent';
 import Home from './routes/home/home.copmonent';
+import Item from './routes/item/item.components';
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
         <Route path="/shop" element={<Shop />}/>
         <Route path="cart" element={<Cart/>}/>
         <Route path="login" element={<Login/>}/>
+        <Route index/>
+        {/* <Route path="/shop" element={<Shop />}/> */}
+        <Route path="/item/:id" element={<Item />} />
       </Route>
     </Routes>
   );

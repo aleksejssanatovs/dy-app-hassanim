@@ -1,5 +1,5 @@
 const ProductItem = ({product}) => {
-    const {id, image_url, name, price, description} = product;
+    const {image_url, name, price, description} = product;
     return (
         <div>
             <img className='h-48 my-2' src={image_url} alt="item" />
