@@ -10,13 +10,15 @@ const ProductItem = ({product}) => {
         dispatch(addToCart(product));
     }
     return (
-        <Link to={`/item/${product.id}`}>
-            <img className='h-48 my-2' src={image_url} alt="item" />
-            <h3 className='font-bold'>{name}</h3>
-            <p>{description}</p>
-            <h4 className='font-bold'>{price}$</h4>
+        <div>
+            <Link to={`/item/${product.id}`}>
+                <img className='h-48 my-2' src={image_url} alt="item" />
+                <h3 className='font-bold'>{name}</h3>
+                <p>{description}</p>
+                <h4 className='font-bold'>{price}$</h4>
+            </Link>
             <button className='bg-black text-white px-1 my-1' onClick={() => addProductToCart(product)}>Add To Cart</button>
-        </Link>
+        </div>
     )
 }
 
