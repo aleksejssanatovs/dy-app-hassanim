@@ -24,7 +24,7 @@ const Shop = () => {
         <div>
             <SearchBar filter={filter} value={inputName} className="text-center" />
             {filteredItems.length === 0 && inputName !== '' ? <div className='text-center font-bold my-4'>Not found any items...</div> : '' }
-            <div className='grid grid-cols-3 m-10 gap-12'>
+            <div className='grid grid-cols-3 m-10 gap-12 justify-items-center'>
             {filteredItems.map((item) => {
                 return <ProductItem key={item.id} product={item} />
             })}

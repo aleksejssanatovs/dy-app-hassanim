@@ -12,6 +12,7 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const cartLength = useSelector((state) => state.cart.cart.length);
   const user = useSelector((state) => state.user.user);
+  const cardQuantity = useSelector((state) => state.cart.cardQuantity);
 
   return (
     <>
@@ -119,7 +120,7 @@ const Header = () => {
                     to="/cart"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
-                    Cart ({cartLength})
+                    Cart ({cardQuantity})
                   </Link>
                   {user ? (
                     <span className="cursor-pointer	-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" onClick={signOutUser}>Logout</span>
