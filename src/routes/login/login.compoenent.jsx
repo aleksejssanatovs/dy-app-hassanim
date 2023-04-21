@@ -2,14 +2,12 @@ import { Card, Input, Typography, Button } from "@material-tailwind/react";
 
 import { useState } from "react";
 
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
-import { login, selectUser } from '../../toolkit/user/userSlice';
+import { login } from '../../toolkit/user/userSlice';
 
 import { 
     auth,
-    createUserWithEmailAndPassword,
-    updateProfile,
     signInWithEmailAndPassword,
  } from "../../utils/firebase.utils";
 
