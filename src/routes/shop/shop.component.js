@@ -9,7 +9,7 @@ const Shop = () => {
     const [filteredItems, setFilteredItems] = useState(items);
     const [inputName, setInputName] = useState('');
     useEffect(() => {
-        setDYContext("CATEGORY", {type: 'all'});
+        setDYContext("CATEGORY", ['all']);
     }, []);
 
     const filter = (e) => {
