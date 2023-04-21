@@ -4,8 +4,13 @@ import { useState } from "react";
 import { Dialog, Popover } from "@headlessui/react";
 import { Bars3Icon } from "@heroicons/react/24/outline";
 
+import { useSelector } from "react-redux";
+
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const cartLength = useSelector((state) => state.cart.cart.length);
+  const user = useSelector((state) => state.user.user);
+
   return (
     <>
       <header className="bg-white">
@@ -61,7 +66,7 @@ const Header = () => {
               to="/cart"
               className="text-sm font-semibold leading-6 text-gray-900"
             >
-              Cart
+              Cart ({cartLength})
             </Link>
             <Link
               to="/login"
@@ -98,7 +103,7 @@ const Header = () => {
                     to="/cart"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
-                    Cart
+                    Cart ({cartLength})
                   </Link>
                   <Link
                     to="/login"

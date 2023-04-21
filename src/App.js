@@ -7,7 +7,27 @@ import Login from './routes/login/login.compoenent';
 import Home from './routes/home/home.copmonent';
 import Item from './routes/item/item.components';
 
+import { useEffect } from 'react';
+import { auth, onAuthStateChanged } from './utils/firebase.utils';
+import { useDispatch } from 'react-redux';
+import { login, logout } from './toolkit/user/userSlice';
+
+
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    onAuthStateChanged(auth, (userAuth) => {
+      if (userAuth) {
+        dispatch(
+          login({
+            email: userAuth.email,
+          })
+        );
+      } else {
+        dispatch(logout());
+      }
+    });
+  }, []);
   return (
     <Routes>
       <Route path="/" element={<Header/>}>

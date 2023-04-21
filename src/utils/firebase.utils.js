@@ -37,5 +37,6 @@ export {
     auth,
     db,
     signOutUser,
-    signInWithEmailAndPassword
+    signInWithEmailAndPassword,
+    onAuthStateChanged
 }

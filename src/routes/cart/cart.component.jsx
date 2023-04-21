@@ -1,6 +1,4 @@
-import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
-import cartSlice from '../../toolkit/cart/cartSlice';
 
 const Cart = () => {
 
