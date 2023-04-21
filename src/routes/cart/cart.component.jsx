@@ -1,5 +1,4 @@
 import { useSelector } from 'react-redux';
-import cartSlice from '../../toolkit/cart/cartSlice';
 import CardItem from '../../components/card-item/card-item.components';
 
 const Cart = () => {

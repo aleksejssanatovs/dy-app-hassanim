@@ -26,7 +26,7 @@ const CardItem = (product) => {
                 <span onClick={handleDecrementItem} className="cursor-pointer">&lt;</span>
                 <h3 className="mx-2">{quantity}x</h3>
                 <span onClick={handleIncrementItem} className="cursor-pointer">&gt;</span>
-                <span onClick={handleItemRemove} className="ml-2 cursor-pointer">&times;</span>
+                <span onClick={handleItemRemove} className="ml-2 cursor-pointer font-bold">&times;</span>
             </div>
             
         </div>
