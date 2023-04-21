@@ -10,9 +10,8 @@ import { signOutUser } from "../../utils/firebase.utils";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const cartLength = useSelector((state) => state.cart.cart.length);
   const user = useSelector((state) => state.user.user);
-  const cardQuantity = useSelector((state) => state.cart.cardQuantity);
+  const cardQuantity = useSelector((state) => state.cart.cartQuantity);
 
   return (
     <>
@@ -74,7 +73,7 @@ const Header = () => {
               to="/cart"
               className="text-sm font-semibold leading-6 text-gray-900"
             >
-              Cart ({cartLength})
+              Cart {cardQuantity !== 0 && <span>({cardQuantity})</span>}
             </Link>
             {user ? (
               <span className="text-sm font-semibold leading-6 text-gray-900 cursor-pointer" onClick={signOutUser}>Logout</span>
@@ -120,7 +119,7 @@ const Header = () => {
                     to="/cart"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
-                    Cart ({cardQuantity})
+                    Cart {cardQuantity !== 0 && <span>({cardQuantity})</span>}
                   </Link>
                   {user ? (
                     <span className="cursor-pointer	-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" onClick={signOutUser}>Logout</span>
