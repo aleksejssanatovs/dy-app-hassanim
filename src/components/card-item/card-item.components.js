@@ -19,7 +19,7 @@ const CardItem = (product) => {
 
     return (
         <div className="grid grid-cols-4 justify-center	justify-items-center items-center my-5">
-            <img className="h-36" src={image_url} alt="item" />
+            <img className="sm:h-36 h-20" src={image_url} alt="item" />
             <h3>{name}</h3>
             <h3>{price}$</h3>
             <div className="flex align-middle">
