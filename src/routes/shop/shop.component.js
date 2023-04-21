@@ -12,7 +12,7 @@ const Shop = () => {
         const keyword = e.target.value;
 
         if (keyword !== '') {
-            const newItems = items.filter((item) => item.name.includes(keyword));
+            const newItems = items.filter((item) => item.name.toLowerCase().includes(keyword.toLowerCase()));
             setFilteredItems(newItems);
         } else {
             setFilteredItems(items);
