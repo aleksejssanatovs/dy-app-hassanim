@@ -6,6 +6,8 @@ import { Bars3Icon } from "@heroicons/react/24/outline";
 
 import { useSelector } from "react-redux";
 
+import { signOutUser } from "../../utils/firebase.utils";
+
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const cartLength = useSelector((state) => state.cart.cart.length);
@@ -50,6 +52,11 @@ const Header = () => {
             </button>
           </div>
           <Popover.Group className="hidden lg:flex lg:gap-x-12">
+            {user &&
+              <div>
+                Hello, {user.email}
+              </div>
+            }
             <Link
               to="/"
               className="text-sm font-semibold leading-6 text-gray-900"
@@ -68,12 +75,16 @@ const Header = () => {
             >
               Cart ({cartLength})
             </Link>
-            <Link
-              to="/login"
-              className="text-sm font-semibold leading-6 text-gray-900"
-            >
-              Login
-            </Link>
+            {user ? (
+              <span className="text-sm font-semibold leading-6 text-gray-900 cursor-pointer" onClick={signOutUser}>Logout</span>
+            ) : (
+              <Link
+                to="/login"
+                className="text-sm font-semibold leading-6 text-gray-900"
+              >
+                Login
+              </Link>
+            )}
           </Popover.Group>
         </nav>
         <Dialog
@@ -87,6 +98,11 @@ const Header = () => {
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
+                  {user &&
+                    <div className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                      Hello, {user.email}
+                    </div>
+                  }
                   <Link
                     to="/"
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
@@ -105,12 +121,16 @@ const Header = () => {
                   >
                     Cart ({cartLength})
                   </Link>
-                  <Link
-                    to="/login"
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >
-                    Login
-                  </Link>
+                  {user ? (
+                    <span className="cursor-pointer	-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" onClick={signOutUser}>Logout</span>
+                  ) : (
+                    <Link
+                      to="/login"
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >
+                      Login
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>
