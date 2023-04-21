@@ -1,12 +1,16 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import ProductItem from '../../components/product-item/product-item.components';
 import SearchBar from '../../components/search-bar/search-bar.component';
+import setDYContext from '../../helpers/dyContext';
 
 const Shop = () => {
     const items = useSelector((state) => state.items);
     const [filteredItems, setFilteredItems] = useState(items);
     const [inputName, setInputName] = useState('');
+    useEffect(() => {
+        setDYContext("CATEGORY", {type: 'all'});
+    }, []);
 
     const filter = (e) => {
         const keyword = e.target.value;
@@ -23,14 +27,14 @@ const Shop = () => {
     return (
         <div>
             <SearchBar filter={filter} value={inputName} className="text-center" />
-            {filteredItems.length === 0 && inputName !== '' ? <div className='text-center font-bold my-4'>Not found any items...</div> : '' }
-            <div className='grid grid-cols-3 m-10 gap-12 justify-items-center'>
-            {filteredItems.map((item) => {
-                return <ProductItem key={item.id} product={item} />
-            })}
+            {filteredItems.length === 0 && inputName !== '' ? <div className='text-center font-bold my-4'>Not found any items...</div> : ''}
+            <div className='grid grid-cols-3 m-10 gap-12'>
+                {filteredItems.map((item) => {
+                    return <ProductItem key={item.id} product={item} />
+                })}
             </div>
         </div>
-        
+
     )
 }
 

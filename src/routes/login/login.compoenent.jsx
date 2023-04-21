@@ -1,10 +1,12 @@
 import { Card, Input, Typography, Button } from "@material-tailwind/react";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { useDispatch } from 'react-redux';
 
 import { login } from '../../toolkit/user/userSlice';
+
+import setDYContext from "../../helpers/dyContext";
 
 import { 
     auth,
@@ -18,21 +20,20 @@ const Login = () => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const dispatch = useDispatch();
+  useEffect(() => {
+    setDYContext("OTHER", []);
+  }, []);
   const sumbitForm = (e) => {
     e.preventDefault();
     if (email && password) {
       signInWithEmailAndPassword(auth, email, password)
-        // returns  an auth object after a successful authentication
-        // userAuth.user contains all our user details
         .then((userAuth) => {
-          // store the user's information in the redux state
           dispatch(
             login({
               email: userAuth.user.email,
             })
           );
         })
-        // display the error if any
         .catch((err) => {
           alert(err);
         });
