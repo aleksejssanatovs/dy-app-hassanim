@@ -12,7 +12,7 @@ const Cart = () => {
   }, []);
   
   return (
-    <div class=" hover:grid-flow-row">
+    <div className=" hover:grid-flow-row">
       <div className="grid grid-cols-4 justify-center	justify-items-center items-center">
         <h3 className="font-bold">Product</h3>
         <h3 className="font-bold">Name</h3>
