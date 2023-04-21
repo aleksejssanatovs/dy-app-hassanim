@@ -32,12 +32,9 @@ const cartSlice = createSlice({
                 item.quantity = 1
             } else {
                 item.quantity--;
+                state.cartTotal -= item.price;
+                state.cartQuantity -= 1;
             }
-            state.cartTotal -= item.price;
-            if (state.cartTotal < 0) {
-                state.cartTotal = 0;
-            }
-            state.cartQuantity += 1;
         },
         removeItem: (state, action) => {
             const removeItem = state.cart.filter((item) => {
