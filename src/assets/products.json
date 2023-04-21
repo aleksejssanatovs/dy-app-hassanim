@@ -1,0 +1,100 @@
+{ 
+    "products" : [
+        {
+            "id": 1,
+            "name": "Iphone 10",
+            "category": "Iphone",
+            "price": 100,
+            "description": "6.4 inch display, A15 bionic CPU",
+            "image_url": "https://media.bite.lt/@bite-lv/sites/default/files/products/2017-11/Apple%20iPhone%20X%20Silver_4_2.png"
+        },
+        {
+            "id": 2,
+            "name": "Iphone 11",
+            "price": 120,
+            "category": "Iphone",
+            "description": "6.7 inch display, A16 bionic CPU",
+            "image_url": "https://ksd-images.lt/display/aikido/store/3ee1d5682bd44bcfcece65069d98730b.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Iphone 7",
+            "price": 70,
+            "category": "Iphone",
+            "description": "5.4 inch display, A15 bionic CPU",
+            "image_url": "https://easyphone.lv/wp-content/uploads/2022/01/iphone-7plus-red.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Iphone 6",
+            "price": 20,
+            "category": "Iphone",
+            "description": "6.2 inch display, A16 bionic CPU",
+            "image_url": "https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP705/SP705-iphone_6-mul.png"
+        },
+        {
+            "id": 5,
+            "name": "Iphone 12",
+            "category": "Iphone",
+            "price": 180,
+            "description": "6.4 inch display, A17 bionic CPU",
+            "image_url": "https://media.bite.lt/@bite-lv/sites/default/files/products/2021-04/iphone_12_purple-3.png"
+        },
+        {
+            "id": 6,
+            "name": "Iphone 13",
+            "price": 220,
+            "category": "Iphone",
+            "description": "6.7 inch display, A18 bionic CPU",
+            "image_url": "https://www.euronics.lv/UserFiles/Products/Images/298473-450427-medium.png"
+        },
+        {
+            "id": 7,
+            "name": "Iphone 14",
+            "price": 270,
+            "category": "Iphone",
+            "description": "5.4 inch display, A18 bionic CPU",
+            "image_url": "https://d3cd3hu9wl72jo.cloudfront.net/1.d/preview/1/d/1dc79580_887544f7_14Pro-DeepPurple.png"
+        },
+        {
+            "id": 8,
+            "name": "Iphone XS",
+            "price": 200,
+            "category": "Iphone",
+            "description": "6.2 inch display, A18 bionic CPU",
+            "image_url": "https://easyphone.lv/wp-content/uploads/2021/04/iphone-xs-max-silver.jpg"
+        },
+        {
+            "id": 9,
+            "name": "Ipad 10.2 8th Gen",
+            "category": "Ipad",
+            "price": 300,
+            "description": "9.4 inch display, A17 bionic CPU",
+            "image_url": "https://capital.lv/cache/pics/920x690/pics/dd/200/0d6a87552df2a5cec379519cd8dda8ed.jpg"
+        },
+        {
+            "id": 10,
+            "name": "Ipad 10.2 9th Gen",
+            "price": 220,
+            "category": "Ipad",
+            "description": "10.2 inch display, A18 bionic CPU",
+            "image_url": "https://guide-images.cdn.ifixit.com/igi/g4SGRalYN2leGXDf.large"
+        },
+        {
+            "id": 11,
+            "name": "Ipad Pro",
+            "price": 270,
+            "category": "Ipad",
+            "description": "10.2 inch display, A18 bionic CPU",
+            "image_url": "https://lmt.mstatic.lv/devices/images/450x450/Apple_iPad_10th_Gen_10_9_Wi-Fi.png"
+        },
+        {
+            "id": 12,
+            "name": "Ipad Pro DY",
+            "price": 200,
+            "category": "Ipad",
+            "description": "10.2 inch display, A18 bionic CPU",
+            "image_url": "https://www.euronics.lv/UserFiles/Products/Images/298169-450111-medium.png"
+        }
+    ]
+}
